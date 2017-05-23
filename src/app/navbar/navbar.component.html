@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="col-md-3 hidden-md-down">
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-github"></i>
+        Github Profile Search
+      </a>
+    </div>
+
+    <div class=" col-md-6">
+      <form id="searchForm">
+        <!-- ngNoForm -->
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" name="username" class="form-control" placeholder="Enter A Github Username...">
+            <!--[(ngModel)]="githubUser.userName" -->
+            <!--(keyup)="searchUser()"-->
+            <div class="input-group-addon"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-3">
+      <nav class="nav navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/amanhimself"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/amandeepmittal"><i class="fa fa-github-alt" aria-hidden="true"></i> Github</a>
+        </li>
+      </nav>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <!--<app-profile></app-profile>-->
+    </div>
+  </div>
+</div>

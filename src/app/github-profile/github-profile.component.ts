@@ -18,17 +18,11 @@ export class GithubProfileComponent implements OnInit {
   searchUser() {
     this.githubService.updateUser(this.username);
 
-    this.githubService.getUser().subscribe(
-      (user) => {
-        this.user = user;
-      }
-    );
+    this.githubService.getUser()
+      .subscribe((user) => {this.user = user;});
 
-    this.githubService.getRepos().subscribe(
-      (repos) => {
-        this.repos = repos;
-      }
-    );
+    this.githubService.getRepos()
+      .subscribe((repos) => {this.repos = repos;});
   }
 
   ngOnInit() {

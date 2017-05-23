@@ -1,14 +1,24 @@
-<div class="row">
-  <div class="com-md-10">
-    <form class="well">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Github username..." [(ngModel)]="username" name="username" (keyup)="searchUser()">
-      </div>
-    </form>
-  </div>
-</div>
-
 <div class="container">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6"  *ngIf="!user">
+      <div class="text-center">
+        <h5>Search any user</h5>
+        <p class="lead">Please enter a <b>username</b>.</p>
+      </div>
+    </div>
+
+    <div class="col-md-offset-3 col-md-6">
+      <form>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter Github username..." [(ngModel)]="username" name="username" (keyup)="searchUser()">
+            <div class="input-group-addon"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <hr>
   <div class="row" *ngIf="user">
     <div class="col-md-6">
       <div class="panel panel-default">
@@ -29,6 +39,7 @@
                 <li class="list-group-item"><strong>Location</strong>: {{user.location}}</li>
                 <li class="list-group-item"><strong>Email</strong>: {{user.email}}</li>
                 <li class="list-group-item"><strong>Website</strong>: <a href="{{user.blog}}" target="_blank">{{user.blog}}</a></li>
+                <li class="list-group-item"><strong>Company</strong>: {{user.company}}</li>
                 <li class="list-group-item"><strong>Memeber Since</strong>: {{user.created_at | date}}</li>
               </ul>
             </div>
@@ -38,6 +49,7 @@
                 <span class="label label-primary">{{user.public_gists}} Public Gists</span>
                 <span class="label label-danger">{{user.followers}} Followers</span>
                 <span class="label label-success">{{user.following}} Following</span>
+                <span class="label label-warning" *ngIf="(user.hireable === true)">Available For Hire!</span>
               </div>
             </div>
           </div>

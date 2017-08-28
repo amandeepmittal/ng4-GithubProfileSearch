@@ -1,5 +1,7 @@
 # Ng4GithubProfileSearch
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amandeepmittal/ng4-GithubProfileSearch.svg)](https://greenkeeper.io/)
+
 DEMO: [https://amandeepmittal.github.io/ng4-GithubProfileSearch/](https://amandeepmittal.github.io/ng4-GithubProfileSearch/)
 
 Angular 4 Github API Example.
